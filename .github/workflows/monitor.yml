@@ -1,0 +1,21 @@
+name: Monitor Pasantias
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"  # cada 12 horas
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Ejecutar script
+        run: python monitor_pasantias.py
