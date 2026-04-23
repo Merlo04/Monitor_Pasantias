@@ -8,7 +8,6 @@ Configuración: editá las variables de la sección CONFIG más abajo.
 """
 
 import requests
-import time
 from bs4 import BeautifulSoup
 import smtplib
 import json
@@ -243,7 +242,4 @@ def main():
  
  
 if __name__ == "__main__":
-    while True:
-        main()
-        print("Esperando 12 horas...\n")
-        time.sleep(43200)  # 12 horas = 43200 segundos
+    main()

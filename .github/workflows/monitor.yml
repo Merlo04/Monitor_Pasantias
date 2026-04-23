@@ -21,4 +21,8 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Ejecutar script
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
+          DESTINATARIO: ${{ secrets.DESTINATARIO }}
         run: python monitor_pasantias.py
