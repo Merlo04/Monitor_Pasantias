@@ -21,10 +21,9 @@ from datetime import datetime
 # ─────────────────────────────────────────────
 #  CONFIG — editá estos valores antes de correr
 # ─────────────────────────────────────────────
-
-GMAIL_USER     = os.getenv("lucamerlo58@gmail.com")      # Tu cuenta de Gmail
-GMAIL_PASSWORD = os.getenv("ofqr eseg wjos yrxy")      # Contraseña de aplicación (ver instrucciones)
-DESTINATARIO   = os.getenv("lucamerlo58@gmail.com")      # A quién mandar el aviso (puede ser el mismo)
+GMAIL_USER     = os.getenv("GMAIL_USER")
+GMAIL_PASSWORD = os.getenv("GMAIL_PASSWORD")
+DESTINATARIO   = os.getenv("DESTINATARIO")
 
 URL_PASANTIAS  = "https://seu.frc.utn.edu.ar/?pIs=1286"
 ARCHIVO_ESTADO = "pasantias_vistas.json"    # Guarda las pasantías ya conocidas
