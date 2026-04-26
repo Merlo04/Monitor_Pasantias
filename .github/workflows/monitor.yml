@@ -26,3 +26,11 @@ jobs:
           GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
           DESTINATARIO: ${{ secrets.DESTINATARIO }}
         run: python monitor_pasantias.py
+
+      - name: Guardar estado en el repositorio
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add pasantias_vistas.json
+          git diff --cached --quiet || git commit -m "Actualizar estado pasantías"
+          git push
